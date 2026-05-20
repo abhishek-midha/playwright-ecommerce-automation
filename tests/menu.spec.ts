@@ -19,12 +19,12 @@ test("validate about link", async({inventoryPage,slidebarPage,page})=>{
     await slidebarPage.clickAbout();
     await expect(page).toHaveURL('https://saucelabs.com/');
 });
-test("validate logout link", async({inventoryPage, slidebarPage, page})=>{
+test("validate logout link @smoke", async({inventoryPage, slidebarPage, page})=>{
     await inventoryPage.openMenu();
     await slidebarPage.clickLogout();
     await expect(page).toHaveURL('https://www.saucedemo.com/');
 })
-test("validate reset app state link", async({inventoryPage, slidebarPage, page})=>{
+test("validate reset app state link @smoke", async({inventoryPage, slidebarPage, page})=>{
     await inventoryPage.addToCart('sauce labs backpack');
     await inventoryPage.openMenu(); 
     await slidebarPage.clickResetAppState();
